@@ -20,7 +20,7 @@ int (*get_op_func(char *format)(va_list args));
 typedef struct format_t
 {
 	char type;
-	void (*print_type(char *format))(va_list args);
+	void (*print_type)(va_list args);
 } fmt_t;
 
 

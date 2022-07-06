@@ -10,8 +10,8 @@
 int (*get_op_func(char *format)(va_list args))
 {
 	fmt_t opp[] = {
-		{'c', print_char},
-		{'s', print_str},
+		{'c', print_c},
+		{'s', print_s},
 		{'\0', NULL}
 	};
 	int i;
