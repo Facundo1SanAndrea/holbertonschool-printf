@@ -7,7 +7,7 @@
  *
  *
  */
-int (*get_op_func(char *format))(va_list args)
+int (*get_op_func(char format))(va_list args)
 {
 	fmt_t opp[] = {
 		{'c', print_c},
@@ -19,7 +19,7 @@ int (*get_op_func(char *format))(va_list args)
 	i = 0;
 	while(opp[i].type != '\0')
 	{
-		if (opp[i].type == *format)
+		if (opp[i].type == format)
 		{
 			return (opp[i].print_type);
 		}
