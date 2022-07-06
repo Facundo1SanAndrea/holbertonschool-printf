@@ -7,9 +7,7 @@
 int print_c(va_list args)
 {
 	char argu = va_arg(args, int);
-
 	_putchar(argu);
-
 	return (1);
 }
 /**
