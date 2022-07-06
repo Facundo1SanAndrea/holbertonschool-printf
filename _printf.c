@@ -9,7 +9,7 @@
 int _printf(const char *format, ...)
 {
 	int i;
-	int count = 0; 
+	int count = 0;	
 
 	if (format == NULL)
 	{
@@ -18,15 +18,17 @@ int _printf(const char *format, ...)
 	else
 	{
 		i = 0;
-		while(format[i] != '%')
+		while(format[i] != '\0')
 		{
+			if (format[i] == '%')
+			{
+				_putchar('F');
+				_putchar('\n');
+			}
 			_putchar(format[i]);
 			i++;
-			count++;
 		}
-		printf("%d\n", count);
-		return(count);
 	}
-	return(count);
+	return(0);
 
 }
