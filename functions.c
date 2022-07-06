@@ -2,6 +2,19 @@
 
 /**
  *
+ */
+int _strlen(char *s)
+{
+	int c = 0;
+
+	while (s[c] != '\0')
+		c++;
+	return(c);
+}
+
+
+/**
+ *
  *
  */
 int print_c(va_list args)
@@ -18,18 +31,18 @@ int print_c(va_list args)
 int print_s(va_list args)
 {
 	char *s = va_arg(args, char *);
-	int count;
+	int i, slen;
 
 	if (s != NULL)
 	{
-		count = 0;
-		while (*s != '\0')
+		slen = _strlen(s);
+		i = 0;
+		while(*s < slen)
 		{
 			_putchar(*s);
-			s++;
-			count++;
+			s++, i++;
 		}
-		return (count);
+		return(i);
 	}
-	return(0);
+	return(-1);
 }

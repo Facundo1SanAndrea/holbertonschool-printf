@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
 				if (format[i + 1] == '%')
 				{
 					 _putchar('%');
-					 i += 2;
+					 i += 1, count++;
 				}
 				if(format[i + 1] != '\0')
 				{
@@ -48,7 +48,11 @@ int _printf(const char *format, ...)
 				}
 			}
 			_putchar(format[i]);
-			i++;
+			i++, count++;
+		}
+		if (format[i] == '\0')
+		{
+			return(count);
 		}
 	}
 	va_end(args);
