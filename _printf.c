@@ -9,11 +9,15 @@
 int _printf(const char *format, ...)
 {
 	int i;
-	int count = 0;	
+	int count = 0;
+	void (*f)(va_list args);
+	va_list args;
+
+	va_start(args, format);
 
 	if (format == NULL)
 	{
-		return(0);
+		return(-1);
 	}
 	else
 	{
@@ -22,13 +26,32 @@ int _printf(const char *format, ...)
 		{
 			if (format[i] == '%')
 			{
-				_putchar('F');
-				_putchar('\n');
+				if (format[i + 1] == '%')
+				{
+					 _putchar('%');
+					 i += 2;
+				}
+				if(format[i + 1] != '\0')
+				{
+					f = get_op_func(format[i + 1]);
+					if (f != NULL)
+					{
+						count = f(args);
+						i += 2;
+					}
+					else
+						i++;
+				}
+				if (format[i + 1] == '\0')
+				{
+					return(count);
+				}
 			}
 			_putchar(format[i]);
 			i++;
 		}
 	}
+	va_end(args);
 	return(0);
 
 }
