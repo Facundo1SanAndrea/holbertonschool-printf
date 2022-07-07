@@ -31,17 +31,17 @@ int print_c(va_list args)
 int print_s(va_list args)
 {
 	char *s = va_arg(args, char *);
-	int slen;
+	int i;
 
-	if (s != NULL)
+	if (s == NULL)
 	{
-		slen = _strlen(s);
-		while(*s < slen)
-		{
-			_putchar(*s);
-			s++;
-		}
-		return(slen);
+		s = "(null)";
 	}
-	return(-1);
+	i = 0;
+	while(*(s + i) != '\0')
+	{
+		_putchar(*(s + i));
+		i++;
+	}
+	return(i);
 }

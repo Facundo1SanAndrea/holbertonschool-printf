@@ -19,7 +19,7 @@ int (*get_op_func(char format))(va_list args)
 	i = 0;
 	while(opp[i].type != '\0')
 	{
-		if (opp[i].type == format)
+		if (opp[i].type == format) /* mandamos format[i+1] */
 		{
 			return (opp[i].print_type);
 		}

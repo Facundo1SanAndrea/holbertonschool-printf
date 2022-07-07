@@ -8,8 +8,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int i;
-	int count = 0;
+	int i, count;
 	int (*f)(va_list args);
 	va_list args;
 
@@ -21,7 +20,7 @@ int _printf(const char *format, ...)
 	}
 	else
 	{
-		i = 0;
+		i = 0, count = 0;
 		while(format[i] != '\0')
 		{
 			if (format[i] == '%')
@@ -29,7 +28,8 @@ int _printf(const char *format, ...)
 				if (format[i + 1] == '%')
 				{
 					 _putchar('%');
-					 i += 1, count++;
+					 i += 2, count++;
+					 continue;
 				}
 				if(format[i + 1] != '\0')
 				{
