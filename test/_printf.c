@@ -36,14 +36,14 @@ int _printf(const char *format, ...)
 					f = get_op_func(format[i + 1]);
 					if (f != NULL)
 					{
-						count = f(args);
+						count += f(args);
 						i += 2;
 						continue;
 					}
 					else
 					{
 						_putchar('%');
-						i++;
+						i++; count++;
 						continue;
 					}
 				}
