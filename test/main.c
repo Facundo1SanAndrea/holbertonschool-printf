@@ -39,10 +39,10 @@ int main(void)
 	RESET;
 	printf("Test 1");
 	printf("\nexpected: ");
-	a = printf("Buenas Noches America");
+	a = printf("Let'see if the cast is correctly done: %c. Did it work?\n", 48);
 	printf("\nobtained: ");
 	fflush(stdout);
-	b = _printf("Buenas Noches America");
+	b = _printf("Let'see if the cast is correctly done: %c. Did it work?\n", 48);
 	cont = cont + output(a,b);
 	printf("\n---------------\n");
 	printf("Test 2");
