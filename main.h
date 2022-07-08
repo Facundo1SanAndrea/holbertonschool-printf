@@ -25,6 +25,6 @@ int print_s(va_list args);
 int (*get_op_func(char format))(va_list args);
 void shortcut(char iplus1);
 int print_d(va_list args);
-
+int print_m(va_list args);
 
 #endif

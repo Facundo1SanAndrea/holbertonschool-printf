@@ -25,12 +25,6 @@ int _printf(const char *format, ...)
 		{
 			if (format[i] == '%')
 			{
-				if (format[i + 1] == '%')
-				{
-					 _putchar('%');
-					 i += 2, count++;
-					 continue;
-				}
 				if(format[i + 1] != '\0')
 				{
 					f = get_op_func(format[i + 1]);

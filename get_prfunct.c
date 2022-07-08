@@ -14,6 +14,7 @@ int (*get_op_func(char format))(va_list args)
 		{'s', print_s},
 		{'d', print_d},
 		{'i', print_d},
+		{'%', print_m},
 		{'\0', NULL}
 	};
 	int i;

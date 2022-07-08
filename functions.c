@@ -88,3 +88,8 @@ int print_d(va_list args)
 	}
 	return(count);
 }
+int print_m(__attribute__((unused)) va_list args)
+{
+	_putchar('%');
+	return(1);
+}
