@@ -55,10 +55,10 @@ int main(void)
 	printf("\n---------------\n");
 	printf("Test 3");
 	printf("\nexpected: ");
-	a = printf("");
+	a = printf("%");
 	printf("\nobtained: ");
 	fflush(stdout);
-	b = _printf("");
+	b = _printf("%");
 	cont = cont + output(a,b);
 	printf("\n---------------\n");
 	printf("Test 4");
