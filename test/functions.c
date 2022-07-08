@@ -45,3 +45,46 @@ int print_s(va_list args)
 	}
 	return(i);
 }
+
+/**
+ * print_d - Prints an integer.
+ * @n: The integer to be printed.
+ */
+int print_d(va_list args)
+{
+	unsigned int deci, digi, natu;
+	int n = va_arg(args, int);
+	int count = 0;
+	double f = 1;
+
+	if (n == 0)
+	{
+		_putchar('0');
+		return(1);
+	}
+	else
+	{
+		if (n < 0)
+		{
+			_putchar('-');
+			natu = -n;
+			count++;
+		}
+		else
+			natu = n;
+
+		while (f <= natu)
+			f = f * 10;
+
+		deci = f / 10;
+
+		while (deci >= 1)
+		{
+			digi = natu / deci;
+			_putchar(digi + '0'), count++;
+			natu = (natu - (deci * digi));
+			deci = deci / 10;
+		}
+	}
+	return(count);
+}
