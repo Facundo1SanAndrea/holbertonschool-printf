@@ -1,4 +1,4 @@
-PRINTF MANUAL PAGE
+PRINTF(3)               Linux Programmer's Manual              PRINTF(3)
 
 NAME:
       _printf - formatted output conversion
