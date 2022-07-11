@@ -57,6 +57,8 @@ Every format specification starts with a percent sign and ends with a letter. He
  - [functions.c](https://github.com/Facundo1SanAndrea/holbertonschool-printf/blob/main/functions.c "functions.c") - Stores the functions used by our _printf()
  - [get_prfunct.c](https://github.com/Facundo1SanAndrea/holbertonschool-printf/blob/main/get_prfunct.c "get_prfunct.c")  - Store the structure containing the functions 
  - [main.h](https://github.com/Facundo1SanAndrea/holbertonschool-printf/blob/main/main.h "main.h") - Prototypes 
+ - [man_3_printf](https://github.com/Facundo1SanAndrea/holbertonschool-printf/blob/main/man_3_printf) - Man page for our _printf(). To display it, type:
+*$* man ./man_3_printf
 
 ## Contributors
 
