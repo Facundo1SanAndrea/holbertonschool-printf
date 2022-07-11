@@ -1,66 +1,71 @@
-# Our _printf()
+PRINTF MANUAL PAGE
 
-This is the main README.md of how our _printf() works and compile. 
+NAME:
+      _printf - formatted output conversion
 
-# Prototype
+SYNOPSIS:
+        #include "main.h"
 
-    int _printf(const char *format, ...); 
- 
- # Description
- The _printf() function (the name comes from “print formatted”) prints a string on the screen using a “format string” that includes the instructions to mix several strings and produce the final string to be printed on the screen. This is a special function because it receives a variable number of arguments. The first parameter is fixed and is the format string. It includes text to be printed literaly and marks to be replaced by the text obtained from the additional parameters.
+        int _printf(const char *format, ...)
 
-## Compilation - Install - Example
+DESCRIPTION:
+	The functions in the printf() family produce output according to
+	a format as described below.  The function printf()
+	write output to stdout, the standard output stream
 
-To install it we should clone the respositiory into our terminal: 
+Format of the format string
+       The format string is a character string, beginning and ending in
+       its initial shift state, if any.  The format string is composed
+       of zero or more directives: ordinary characters (not %), which
+       are copied unchanged to the output stream; and conversion
+       specifications, each of which results in fetching zero or more
+       subsequent arguments.  Each conversion specification is
+       introduced by the character %, and ends with a conversion
+       specifier.  In between there may be (in this order) zero or more
+       flags, an optional minimum field width, an optional precision and
+       an optional length modifier.
 
-    $ git clone  https://github.com/Facundo1SanAndrea/holbertonschool-printf.git
-To compile the program we create a simple function:
+   Conversion specifiers
+       A character that specifies the type of conversion to be applied.
+       The conversion specifiers and their meanings are:
+	
+	d, i   The int argument is converted to signed decimal notation.
 
-    #include "main.h"
-    
-    int main(void)
-    {
-	    _printf("Character:[%c]\n", 'H');
-	    return (0);
-	} 
-	_______________________________________________
-	$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
-	$ ./a.out
-	Character:[H]
-	$
-## Requirements
+	c    The argument is converted to an char, and the resulting character is written.
 
--   Allowed editors:  `vi`,  `vim`,  `emacs`
--   All your files will be compiled on Ubuntu 20.04 LTS 
--   Your code should use the  `Betty`  style. It will be checked using  [betty-style.pl](https://github.com/holbertonschool/Betty/blob/master/betty-style.pl "betty-style.pl")  and  [betty-doc.pl](https://github.com/holbertonschool/Betty/blob/master/betty-doc.pl "betty-doc.pl")
-- Lenguage used:  C
-## Argument list
-When printf processes its arguments, it starts printing the characters it finds in the first argument,
-one by one. When it finds a percent it knows it has a format specification. It goes to the next argument and uses its value, printing it according to that format specification. It then returns to printing a character at a time (from the first argument). It is okay to include more than one format specification in the printf string. In that case, the first format specification goes with the first additional argument, second goes with second, and so forth.
+	s - The const char * argument is expected to be a pointer to an array of character type (pointer to a string).
 
+RETURN VALUE
+       Upon successful return, these functions return the number of
+       characters printed (excluding the null byte used to end output to
+       strings).
 
-## Format Specifiers  
+	If an output error is encountered, a negative value is returned.
 
-Every format specification starts with a percent sign and ends with a letter. Here is a list:
-| % | Description | 
-|--|--|
-| %c | Print single character |
-| %s | Print a string of characters  |
-| %d | Print a decimal (base 10) number|
-| %i | Print an integer in base 10 |
-| %% | Print a percent sign |
+BUGS:
+	This program doesn't handle adding flags, fields, precision, or length modifiers.
 
+EXAMPLE:
 
-## General files
+	#include "main.h"
 
- - [_printf.c](https://github.com/Facundo1SanAndrea/holbertonschool-printf/blob/main/_printf.c "_printf.c") - Stores the main code
- - [functions.c](https://github.com/Facundo1SanAndrea/holbertonschool-printf/blob/main/functions.c "functions.c") - Stores the functions used by our _printf()
- - [get_prfunct.c](https://github.com/Facundo1SanAndrea/holbertonschool-printf/blob/main/get_prfunct.c "get_prfunct.c")  - Store the structure containing the functions 
- - [main.h](https://github.com/Facundo1SanAndrea/holbertonschool-printf/blob/main/main.h "main.h") - Prototypes 
+	/**
+	*main - using function crated, print a string of characters
+	*
+	*Return: 0 if successful
+	*/
+	int main(void)
+	{
+	
+	_printf("String:[%s]\n", "I am a string !");
+	return (0)
+	}
+	
+OUTPUT:
+	String:[I am a string !]
+	alex@ubuntu:~/c/printf$
 
-## Contributors
+AUTHORS:                                                                                                                                                          
+        Written by Facundo San Andrea & Joaquín Dominguez for Holberton School
 
-Joaquin Dominguez - https://github.com/joakG16
-Facundo San Andrea - https://github.com/Facundo1SanAndrea
-Date of release 12/07/2022
-
+GNU                            2022-07-12                      PRINTF(3)
