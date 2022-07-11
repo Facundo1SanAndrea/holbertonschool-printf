@@ -8,14 +8,14 @@
  * struct format_t - struct
  *
  * @type: The types of arguments passed to the function
- * @type_func: The function that performs acording
+ * @print_type: The function that performs acording
  * to the actual argument passed
  */
 
 typedef struct format_t
 {
-        char type;
-        int (*print_type)(va_list args);
+	char type;
+	int (*print_type)(va_list args);
 } fmt_t;
 
 int _printf(const char *format, ...);
