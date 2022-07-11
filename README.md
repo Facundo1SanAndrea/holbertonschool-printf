@@ -60,7 +60,8 @@ Every format specification starts with a percent sign and ends with a letter. He
 
 ## Contributors
 
-Joaquin Dominguez - https://github.com/joakG16
-Facundo San Andrea - https://github.com/Facundo1SanAndrea
-Date of release 12/07/2022
+ - [Joaquin Dominguez](https://github.com/joakG16)
+ - [Facundo San Andrea](https://github.com/Facundo1SanAndrea)
+
+### Date of release: 07/12/2022
 
