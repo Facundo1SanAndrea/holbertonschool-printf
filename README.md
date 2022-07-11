@@ -60,6 +60,7 @@ Every format specification starts with a percent sign and ends with a letter. He
  - [man_3_printf](https://github.com/Facundo1SanAndrea/holbertonschool-printf/blob/main/man_3_printf) - Man page for our _printf(). To display it, type:
 *$* man ./man_3_printf
 
+
 ## Contributors
 
  - [Joaquin Dominguez](https://github.com/joakG16)
