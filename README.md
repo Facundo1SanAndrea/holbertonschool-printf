@@ -60,6 +60,8 @@ Every format specification starts with a percent sign and ends with a letter. He
  - [man_3_printf](https://github.com/Facundo1SanAndrea/holbertonschool-printf/blob/main/man_3_printf) - Man page for our _printf(). To display it, type:
 *$* man ./man_3_printf
 
+## _printf() Flowchart Body
+![image](https://user-images.githubusercontent.com/105323674/178380602-09062b20-4c7c-443f-94be-c85c48d69d05.png)
 
 ## Contributors
 
@@ -67,7 +69,5 @@ Every format specification starts with a percent sign and ends with a letter. He
  - [Facundo San Andrea](https://github.com/Facundo1SanAndrea)
 
 ### Date of release: 07/12/2022
-## _printf() Flow Chart Body
-![image](https://user-images.githubusercontent.com/105323674/178380602-09062b20-4c7c-443f-94be-c85c48d69d05.png)
 
 
