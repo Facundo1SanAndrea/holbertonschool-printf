@@ -67,7 +67,7 @@ Every format specification starts with a percent sign and ends with a letter. He
  - [Facundo San Andrea](https://github.com/Facundo1SanAndrea)
 
 ### Date of release: 07/12/2022
-## _Printf() Body
+## _printf() Flow Chart Body
 ![image](https://user-images.githubusercontent.com/105323674/178380602-09062b20-4c7c-443f-94be-c85c48d69d05.png)
 
 
